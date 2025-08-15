@@ -1,10 +1,16 @@
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
 module.exports = {
   siteMetadata: {
-    title: `Mints Test`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Mi sitio`,
+    siteUrl: `https://www.misitio.com`
   },
-  plugins: ["gatsby-plugin-netlify-cms", "gatsby-plugin-postcss"]
+  plugins: [
+    // otros plugins...
+    {
+      resolve: "gatsby-plugin-netlify-cms",
+      options: {
+        // modulePath es opcional, solo si tienes un archivo JS para inicializar widgets personalizados
+        // modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+  ],
 };
